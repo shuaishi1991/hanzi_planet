@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>识字启蒙 · 跟书学</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+<div id="stars"></div>
+
+<section id="screen-books" class="screen active">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-left"><button class="nb-btn" id="btn-notebook">📒 错题本</button><button class="nb-btn" id="btn-tasks">✨ 任务</button><button class="nb-btn" id="btn-cash">💵 兑奖</button><button class="nb-btn" id="btn-voice">🎙 音色</button><button class="nb-btn" id="btn-save">💾 存档</button></div>
+      <span class="coin-badge"></span>
+    </div>
+    <h1 class="title"><span>识</span><span>字</span><span>启</span><span>蒙</span></h1>
+    <p class="subtitle">跟着《识字启蒙第一课》三本书，一课一课闯关<br>🎴 认一认 · 🎧 听音选选 · 🎤 读一读</p>
+    <div class="notice">已录入第一册全部 22 课；第二、三册内容待提供</div>
+    <div class="book-list" id="book-list"></div>
+    <button class="reset" id="btn-reset">🔁 重置进度</button>
+  </div>
+</section>
+
+<section id="screen-chapters" class="screen">
+  <div class="wrap">
+    <div class="topbar"><button class="back" id="chapters-back">← 书架</button><span class="coin-badge"></span></div>
+    <h2 id="book-heading">第一册</h2>
+    <div class="chapter-list" id="chapter-list"></div>
+  </div>
+</section>
+
+<section id="screen-notebook" class="screen">
+  <div class="wrap">
+    <div class="topbar"><button class="back" id="nb-back">← 书架</button><span class="coin-badge"></span></div>
+    <h2>📒 错题本</h2>
+    <div class="nb-summary" id="nb-summary"></div>
+    <button class="nb-start" id="nb-start">🎯 开始攻克错题</button>
+    <div class="nb-list" id="nb-list"></div>
+  </div>
+</section>
+
+<section id="screen-tasks" class="screen">
+  <div class="wrap">
+    <div class="topbar"><button class="back" id="tasks-back">← 书架</button><span class="coin-badge"></span></div>
+    <h2>✨ 日常任务</h2>
+    <p class="tasks-sub">写字、做数学……完成也能赚金币（家长确认后点领取）</p>
+    <div class="task-list" id="task-list"></div>
+    <div class="task-add">
+      <div class="task-add-title">➕ 自定义任务</div>
+      <div class="task-add-row">
+        <input class="task-input" id="task-title" type="text" maxlength="40" placeholder="任务名称，如：背一首古诗" />
+        <input class="task-input coins" id="task-coins" type="number" min="1" max="9999" inputmode="numeric" placeholder="金币" />
+        <button class="task-add-btn" id="task-add-btn">添加</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screen-coins" class="screen">
+  <div class="wrap">
+    <div class="topbar"><button class="back" id="coins-back">← 返回</button><span class="coin-badge"></span></div>
+    <h2><span class="ico-coin" aria-hidden="true"></span> 金币明细</h2>
+    <p class="tasks-sub">点右上角金币也可进入本页 · 记录全部增加与消耗</p>
+    <div class="cash-balance" id="coins-summary"></div>
+    <div class="coin-log-head">📜 收支记录 <span id="coin-log-hint"></span></div>
+    <div class="coin-log" id="coin-log"></div>
+  </div>
+</section>
+
+<section id="screen-play" class="screen">
+  <div class="wrap">
+    <div class="topbar">
+      <button class="back" id="play-back">← 返回</button>
+      <div class="dots" id="play-dots"></div>
+      <span class="coin-badge"></span>
+    </div>
+    <div class="mode-tabs" id="play-tabs">
+      <button class="tab" id="tab-learn">🎴 认一认</button>
+      <button class="tab" id="tab-listen">🎧 听音选选</button>
+      <button class="tab" id="tab-read">🎤 读一读</button>
+    </div>
+    <div id="play-body" class="play-body"></div>
+  </div>
+</section>
+
+<div class="modal" id="modal"><div class="modal-card" id="modal-card"></div></div>
+
+<script src="js/pinyin.js"></script>
+<script src="js/books.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>音色样例试听</title>
+  <style>
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; color: #222; }
+    h1 { font-size: 22px; }
+    p { color: #555; line-height: 1.5; }
+    .voice { border: 1px solid #ddd; border-radius: 12px; padding: 14px 16px; margin: 14px 0; }
+    .voice h2 { margin: 0 0 6px; font-size: 18px; }
+    .meta { font-size: 13px; color: #777; margin-bottom: 10px; }
+    .row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+    .label { width: 4.5em; font-weight: 600; }
+    audio { flex: 1; height: 36px; }
+  </style>
+</head>
+<body>
+  <h1>预生成音频 · 音色样例</h1>
+  <p>内容取自第一课：字「一」、词「一天」、句「我爱我的爸爸妈妈。」听完告诉我喜欢哪一种，再批量生成。</p>
+
+  <div class="voice">
+    <h2>1. Xiaoxiao（晓晓）</h2>
+    <div class="meta">女声 · 温暖稳重 · 常用于教学/新闻</div>
+    <div class="row"><span class="label">字</span><audio controls src="Xiaoxiao_字_一.mp3"></audio></div>
+    <div class="row"><span class="label">词</span><audio controls src="Xiaoxiao_词_一天.mp3"></audio></div>
+    <div class="row"><span class="label">句</span><audio controls src="Xiaoxiao_句_爸爸妈妈.mp3"></audio></div>
+  </div>
+
+  <div class="voice">
+    <h2>2. Xiaoyi（晓伊）</h2>
+    <div class="meta">女声 · 活泼 · 卡通/小说风，偏适合儿童</div>
+    <div class="row"><span class="label">字</span><audio controls src="Xiaoyi_字_一.mp3"></audio></div>
+    <div class="row"><span class="label">词</span><audio controls src="Xiaoyi_词_一天.mp3"></audio></div>
+    <div class="row"><span class="label">句</span><audio controls src="Xiaoyi_句_爸爸妈妈.mp3"></audio></div>
+  </div>
+
+  <div class="voice">
+    <h2>3. Yunxia（云夏）</h2>
+    <div class="meta">男声 · 可爱卡通风</div>
+    <div class="row"><span class="label">字</span><audio controls src="Yunxia_字_一.mp3"></audio></div>
+    <div class="row"><span class="label">词</span><audio controls src="Yunxia_词_一天.mp3"></audio></div>
+    <div class="row"><span class="label">句</span><audio controls src="Yunxia_句_爸爸妈妈.mp3"></audio></div>
+  </div>
+</body>
+</html>
