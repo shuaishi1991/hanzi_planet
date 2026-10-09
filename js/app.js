@@ -28,8 +28,9 @@ const DEFAULT_EXTRA_TASKS = [
   { id: "write-page", title: "写一页字帖", coins: 50, icon: "✍️" },
   { id: "math-page", title: "完成一页数学练习", coins: 20, icon: "🔢" }
 ];
+const INITIAL_COINS = 1089;
 function normalizeProgress(d) {
-  if (typeof d.coins !== "number") d.coins = 0;
+  if (typeof d.coins !== "number") d.coins = INITIAL_COINS;
   if (!d.wrong) d.wrong = {};
   if (!Array.isArray(d.cashouts)) d.cashouts = [];
   if (!Array.isArray(d.coinLog)) d.coinLog = [];
@@ -47,7 +48,7 @@ const store = {
       const d = JSON.parse(localStorage.getItem(this.key));
       if (d && d.chapters) return normalizeProgress(d);
     } catch (e) {}
-    return normalizeProgress({ chapters: {}, wrong: {}, coins: 0, cashouts: [], coinLog: [], extraTasks: DEFAULT_EXTRA_TASKS.map(t => ({ ...t })), play: {} });
+    return normalizeProgress({ chapters: {}, wrong: {}, coins: INITIAL_COINS, cashouts: [], coinLog: [], extraTasks: DEFAULT_EXTRA_TASKS.map(t => ({ ...t })), play: {} });
   },
   save() { localStorage.setItem(this.key, JSON.stringify(progress)); }
 };
